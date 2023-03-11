@@ -36,13 +36,18 @@ figure {
 }
 
 .acc__label {
-  display: inline-block;
+  display: flex;
+  justify-content: space-between;
   margin: 0;
   padding: 1.3rem 0;
-  min-width: 89%;
+  flex-basis: 89%;
   font-size: 2.5rem;
   font-weight: 700;
   border-bottom: 0.1rem solid rgba(225, 225, 225);
+}
+
+.label__title {
+  flex-basis: 89%;
 }
 
 .acc-item {
@@ -64,6 +69,10 @@ figcaption {
   max-width: 30rem;
   height: 100%;
   margin: 0 auto;
+}
+
+input[type="radio"] {
+  display: none;
 }
 
 input[type="radio"]:checked + .acc-item {
@@ -89,6 +98,7 @@ input[type="radio"]:checked + .acc-item {
   .acc__label {
     min-width: 96%;
     font-size: 2rem;
+    cursor: pointer;
   }
 
   figcaption {
