@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-size: 10px;
 }
@@ -6,38 +10,39 @@ body {
   font-size: 1.6rem;
 }
 
+figure {
+  margin: 0;
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
   row-gap: 3rem;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 0.3rem;
 }
 
 .title {
-  font-size: 2rem;
+  font-size: 3rem;
   margin: 0;
   padding: 1.6rem 0;
   text-align: center;
-  border-bottom: 1px solid rgba(225, 225, 225);
+  border-bottom: 0.1rem solid rgba(225, 225, 225);
 }
 
 .acc-wrapper {
   margin: 0 auto;
-  min-width: 50%;
-  max-width: 104rem;
+  max-width: 95vw;
 }
 
 .acc__label {
   display: inline-block;
-  font-size: 1.8rem;
   margin: 0;
   padding: 1.3rem 0;
-  min-width: 90%;
-  cursor: pointer;
-  background-color: #000;
-  color: #fff;
-  z-index: 1;
+  min-width: 89%;
+  font-size: 2.5rem;
+  font-weight: 700;
+  border-bottom: 0.1rem solid rgba(225, 225, 225);
 }
 
 .acc-item {
@@ -45,28 +50,75 @@ body {
   max-height: 3rem;
   margin-top: -4.4rem;
   overflow: hidden;
-  background-color: red;
   transition: all 1s;
 }
 
 figcaption {
-  padding-top: 4.4rem;
+  padding-top: 5rem;
+  padding-bottom: 1rem;
+  font-size: 2rem;
 }
 
 .img-content {
-  width: 70rem;
+  display: block;
+  max-width: 30rem;
   height: 100%;
-  padding: 1rem 0;
+  margin: 0 auto;
 }
 
 input[type="radio"]:checked + .acc-item {
-  min-height: 50rem;
+  min-height: 30rem;
   transition: all 1s;
 }
 
+@media (min-width: 820px) {
+  .acc-wrapper {
+    min-width: 50%;
+    max-width: 95%;
+  }
+
+  input[type="radio"]:checked + .acc-item {
+    min-height: 52rem;
+    transition: all 1s;
+  }
+
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .acc__label {
+    min-width: 96%;
+    font-size: 2rem;
+  }
+
+  figcaption {
+    font-size: 1.8rem;
+  }
+
+  .img-content {
+    max-width: 78rem;
+  }
+}
+
 @media (min-width: 1920px) {
+  .acc-wrapper {
+    margin: 0 auto;
+    min-width: 50%;
+    max-width: 104rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
   .acc__label {
     min-width: 97%;
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+
+  figcaption {
+    font-size: 1.6rem;
   }
 
   .acc__label:hover ~ .acc-item {
@@ -75,6 +127,16 @@ input[type="radio"]:checked + .acc-item {
   }
 
   .acc-item:hover {
+    min-height: 50rem;
+    transition: all 1s;
+  }
+
+  .img-content {
+    max-width: 70rem;
+    height: 100%;
+  }
+
+  input[type="radio"]:checked + .acc-item {
     min-height: 50rem;
     transition: all 1s;
   }
