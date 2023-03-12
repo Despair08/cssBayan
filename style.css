@@ -80,7 +80,7 @@ input[type="radio"]:checked + .acc-item {
   transition: all 1s;
 }
 
-@media (min-width: 820px) {
+@media (min-width: 820px) and (max-width: 1900px) {
   .acc-wrapper {
     min-width: 50%;
     max-width: 95%;
@@ -98,7 +98,6 @@ input[type="radio"]:checked + .acc-item {
   .acc__label {
     min-width: 96%;
     font-size: 2rem;
-    cursor: pointer;
   }
 
   figcaption {
